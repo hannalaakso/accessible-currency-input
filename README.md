@@ -1,27 +1,24 @@
-# GOV.UK Prototype kit · [![Greenkeeper badge](https://badges.greenkeeper.io/alphagov/govuk_prototype_kit.svg)](https://greenkeeper.io/)
+# Currency input
 
-Go to the [GOV.UK Prototype Kit site](https://govuk-prototype-kit.herokuapp.com/docs) to download the latest version and read the documentation.
+Help users enter an amount of money in a specified currency.
 
-## About the prototype kit
+## When to use this component
 
-The prototype kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
+Use the Currency input component whenever you need users to tell you an amount of money in a particular currency, for example pounds sterling or euros.
 
-Read the [project principles](https://govuk-prototype-kit.herokuapp.com/docs/principles).
+## How it works
 
-## Security
+The Currency input component shows users which unit of currency they need to enter their amount in.
 
-If you publish your prototypes online, they **must** be protected by a [username and password](https://govuk-prototype-kit.herokuapp.com/docs/publishing-on-heroku). This is to prevent members of the public finding prototypes and thinking they are real services.
+There are two ways to implement the Currency input component. You can use HTML or, if you are using [Nunjucks](https://mozilla.github.io/nunjucks/) or the [GOV.UK Prototype Kit](Insert prototype kit URL), you can use the Currency input macro.
 
-You must protect user privacy at all times, even when using prototypes. Prototypes made with the kit look like GOV.UK, but do not have the same security provisions. Always make sure you are handling user data appropriately.
+[Example & codeblock for Currency input component]
 
-## Installation instructions
+### Preventing non-numeric characters
+The component uses ```input type=”text”``` rather than ```type=number``` to ensure that all users can enter the decimal symbol.
 
-- [Installation guide for new users (non technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/introduction)
-- [Installation guide for developers (technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/developer-install-instructions)
+A progressive enhancement has been applied to prevent non-numeric input. To use this enhancement, install the numeric input component or include ```numeric-input.js``` on the page and include the attribute ```data-non-numeric``` on the input.
 
-## Community
-
-We have two Slack channels for the Prototype kit. You'll need a government email address to join them.
-
-* [Slack channel for users of the prototype kit](https://ukgovernmentdigital.slack.com/messages/prototype-kit/)
-* [Slack channel for developers of the prototype kit](https://ukgovernmentdigital.slack.com/messages/prototype-kit-dev/)
+## Research on this component
+This component has been tested in a prototype of the apply for a temporary event notice service.
+Read more about the [how the Currency input component has been tested and iterated](https://github.com/alphagov/govuk-design-system/wiki/Currency-input-testing-and-research).
