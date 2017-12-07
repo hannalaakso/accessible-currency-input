@@ -1,64 +1,42 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GOV.UK prototype kit
+  Event costs
 {% endblock %}
 
 {% block content %}
 
 <main id="content" role="main">
   <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="column-full">
+    <br>
+    <br>
 
-      <h1 class="heading-xlarge">
-        The GOV.UK prototype kit
-        <span class="heading-secondary">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+    <form class="form" method="" novalidate>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      <div class="form-group" data-required="Please answer this question">
+        <label class="form-label" for="tickets-cost">
+           <h1 class="heading-large">
+             How much are the tickets for your event?
+           </h1>
+           <span class="form-hint">For example, £32.99</span>
+         </label>
+         <div class="form-control-3-4">
+           <div class="govuk-currency-input">
+             <div class="govuk-currency-input__inner">
+               <span class="govuk-currency-input__inner__unit">£</span>
+               <input class="govuk-currency-input__inner__input form-control form-control-1-4" aria-label="Enter amount in pounds" name="tickets-cost" type="text" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="form-group">
+         <input class="button" type="submit" value="Continue">
+       </div>
+     </form>
 
-      <h2 class="heading-medium">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-			<h2 class="heading-medium">Examples and documentation</h2>
-
-			<ul class="list list-bullet">
-				<li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-				<li><a href="https://github.com/alphagov/govuk_prototype_kit">GitHub</a></li>
-			</ul>
-
-      <h2 class="heading-medium">Other resources</h2>
-
-			<ul class="list list-bullet">
-				<li>
-					<a href="https://govuk-elements.herokuapp.com/snippets/">
-						Guide to GOV.UK Elements
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/service-manual">
-						Service design manual
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/design-principles">
-						Government Digital Service Design Principles
-					</a>
-				</li>
-			</ul>
-
-    </div>
   </div>
+</div>
 </main>
 
 {% endblock %}
-
-
