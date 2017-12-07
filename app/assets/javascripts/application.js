@@ -14,6 +14,10 @@ $(document).ready(function () {
   // Details/summary polyfill from frontend toolkit
   GOVUK.details.init()
 
+  // Add number input polyfill
+  // For options and data attributes, see number-input.js
+  GOVUK.numberInput.init()
+
   // Show and hide toggled content
   // Where .multiple-choice uses the data-target attribute
   // to toggle hidden content
